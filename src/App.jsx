@@ -10,7 +10,7 @@ import Home from "./Components/HomePage/Home";
 function App() {
   return (
     <BrowserRouter>
-      <main>
+      <main className="h-[100vh]">
         <Routes>
           <Route path="/" element={<LoginPage/>}/>
           <Route path="/home" element={<Home/>}/>
