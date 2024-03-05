@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BackGround from "../background/backGround";
 import { MdHomeFilled } from "react-icons/md";
 import { LuCalendarDays } from "react-icons/lu";
@@ -15,9 +15,11 @@ import { IoLocationOutline } from "react-icons/io5";
 import { TbClock24 } from "react-icons/tb";
 import { TbClockOff } from "react-icons/tb";
 import { FaClockRotateLeft } from "react-icons/fa6";
+import CircularProgress from "./CircularProgress";
 
 const Home = () => {
   const percentage = 66;
+  const [isChecked,setIsChecked] = useState(false)
   return (
     <>
       <div className="relativ  h-screen">
@@ -43,7 +45,7 @@ const Home = () => {
             </div>
             <div
               className="absolute text-white z-10"
-              style={{ top: "13%", right: "8%" }}
+              style={{ top: "12%", right: "10%" }}
             >
               <div className="">
                 <img
@@ -59,45 +61,51 @@ const Home = () => {
                 <p className="font-extralight text-xs">Emp ID</p>
               </div>
             </div>
-            <div className="row-span-4 ">
+            <div className="row-span-4 p-3 ">
               <div className=" bg-opacity-5 bg-white border-2 border-white h-full rounded-2xl grid grid-rows-3 text-white backdrop-blur-3xl">
                 <div className="row-span-2 grid justify-center  px-5 pt-5">
-                  <p className="">Company Name</p>
-                  <p className="font-extralight flex justify-center items-center gap-2">
+                  <p className="font-light">Company Name</p>
+                  <p className="font-extralight flex justify-center items-center gap-1">
                     <span>
                       <IoLocationOutline />
                     </span>{" "}
                     location
                   </p>
                   <h1 className="text-5xl">10:26 AM</h1>
-                  <p className="text-lg">12 March 2024</p>
+                  <p className="text-lg font-light">12 March 2024</p>
                 </div>
                 <div className="row-span-1  grid justify-center ">
-                  <hr className="text-white w-[90%] mx-auto" />
+                  <hr className="text-white w-full mx-auto " />
 
-                  <div className="relative flex justify-center items-center">
-                    <label class="switch relative">
-                      <input type="checkbox" class="toggle-btn rounded-full relative" />
-                      <p className="absolute top-0 z-15 text-black">
-                        alskdj
-                      </p>
+                  <div className="relative flex justify-center items-center p-4">
+                    <p className="absolute z-20 text-white">
+                      Slide to Attendance
+                    </p>
+                    <label class="switch relative flex  items-center ">
+                      <div className="absolute z-20 p-4 "><p style={{ transform: isChecked ? "translateX(250px)" : "translateX(0)",transition: "transform 0.8s ease" }} className="arrow text-red-500 font-normal"><FaArrowRightLong/></p></div>
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={()=>setIsChecked((prev)=>!prev)}
+                        class="toggle-btn rounded-full relative grid justify-center items-center"
+                      />
                       <span class="slider "></span>
-
                     </label>
-                    <div className="flex-1 absolute  grid justify-center items-center">
+                    {/* <div className="flex-1 absolute  grid justify-center items-center">
                       <p className="text-white">Slide to Attendance</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="row-span-5 p-5 px-5 ">
+          <div className="row-span-5 p-2 px-5 ">
             <div className=" grid grid-rows-7 gap-1">
               <div className="row-span-3 grid justify-center items-center ">
                 <div>
-                  <CircularProgressbar
+                    <CircularProgress/>
+                  {/* <CircularProgressbar
                     value={66}
                     text={`07:10`}
                     className="h-[10rem]"
@@ -113,7 +121,7 @@ const Home = () => {
                         fill: "white",
                       },
                     }}
-                  />
+                  /> */}
                 </div>
               </div>
 
@@ -164,7 +172,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="row-span-1 rounded-t-2xl bg-[#24074F] grid items-center">
+          <div className="row-span-1 bottom-0 rounded-t-2xl bg-[#24074F] grid items-center">
             <div className="grid grid-cols-5 text-white text-xs">
               <div className="grid justify-center items-center gap-1">
                 <div className="flex justify-center">
