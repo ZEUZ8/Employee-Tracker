@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#root {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  background: linear-gradient(180deg, #25005C, #40009D);
+  height: 100vh;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+
+.finger-gradient{
+  background: linear-gradient(180deg,#6272C5,#8160B6);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+  background-color: #f0f0f0; /* Set background color or image */
+  z-index: -1; /* Ensure the background is behind other content */
+}
+
+
+.toggle-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 300px;
+  height: 60px;
+  /* background: linear-gradient(180edg,#7C3FD7,#B28AEE); */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7));
+  position: relative;
+  cursor: pointer;
+}
+
+/* Styles for the slider inside the toggle button */
+.toggle-btn::after {
+  content: '';
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: 0.8s;
+}
+
+
+
+/* Style for the toggle button when checked */
+.toggle-btn:checked::after {
+  transform: translateX(240px);
+}
+
+.bg-gradient{
+  background: radial-gradient(circle at center, 
+  #4690D4 0%,  /* Start color stop */
+  #6EBFF4 4.48%, /* Mid color stop */
+  #A5EFFF 20% /* End color stop */
+);
+}
+
+
