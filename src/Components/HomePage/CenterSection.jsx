@@ -44,7 +44,7 @@ const CenterSection = () => {
 
       <div className="  flex w-full ">
         <div className="flex-1 ">
-          <div className=" bg-white h-[4rem] flex  items-center justify-between rounded-2xl p-3">
+          <div className=" bg-white h-[4rem] flex  items-center justify-between rounded-2xl px-3">
             <div className="text-xl font-bold text-gray-400">
               Name your activity
             </div>

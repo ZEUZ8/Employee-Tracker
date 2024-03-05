@@ -126,7 +126,7 @@ const Home = () => {
           <div className="row-span-5 p-4">
             <CenterSection/>
           </div>
-          <div className="row-span-1 row-start-12 rounded-t-2xl bg-[#24074F]  grid items-cente max-w-[100%]">
+          <div className="row-span-1 row-start-12 rounded-t-2xl bg-[#24074F]  grid items-center max-w-[100%]">
             <div className="grid grid-cols-5  text-white text-xs">
               <div className="grid justify-center items-center gap-1">
                 <div className="flex justify-center">
