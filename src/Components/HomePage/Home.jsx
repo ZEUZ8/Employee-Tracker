@@ -40,10 +40,10 @@ const Home = () => {
         alt="Background Image"
       />
       <div className="absolute inset-0 ">
-        <div className=" p-5 relative ">
+        <div className=" p-5 relative">
           <FirstSection />
         </div>
-        <div className="  px-2 grid gap-5">
+        <div className="  px-2 grid gap-2  pb-[4rem]">
           <CenterSection />
         </div>
         <div className="fixed bottom-0 left-0 w-full ">
