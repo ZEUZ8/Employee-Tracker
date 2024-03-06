@@ -11,7 +11,7 @@ const LoginPage = () => {
 
       {/* Content */}
       <div className=" absolute inset-0 max-h-[100vh]  grid grid-rows-12">
-        <div className="row-start-8 flex flex-col items-center justify-center ">
+        <div className="row-start-7 flex flex-col items-center justify-center ">
           {/* Your login component */}
           <div className="w-4/5 md:w-2/3 lg:w-1/2">
             <Login />
