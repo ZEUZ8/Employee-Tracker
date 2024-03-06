@@ -1,38 +1,55 @@
-/* .circular-progress{
+.circular-progress {
+}
+
+.container {
+  display: flex;
+  width: 300px;
+  padding: 10px 0;
+  /* background: white; */
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+}
+.circular-progress {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(#7d2ae8 3.6deg, #ededed 300deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  /* background-color: white; */
+  background-image: radial-gradient(circle, #9650db, #25005c);
+}
+
+.progress-value {
+  position: absolute;
+}
+
+/* .clockBorder {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to left, #00c853, #83897d) 1;
 
 } */
 
-.container{
-    display: flex;
-    width: 300px;
-    height: 100px;
-    padding: 10px 0;
-    background: white;
-    border-radius: px;
-    flex-direction: column;
-    align-items: center;
-}
-.circular-progress{
-    position: relative;
-    width: 70%;
-    height: 70%;
-    border-radius: 50%;
-    background: conic-gradient(#7d2ae8 3.6deg,#ededed 300deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.clockBorder{
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 3rem;
+    -webkit-border-radius: 25px;
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, from(#0685ed), to(#000304)) 1 100%;
 }
 
-.circular-progress::before{
-    content: "";
-    position: absolute;
-    height: 50%;
-    width: 45%;
-    border-radius: 50%;
-    /* background-color: white; */
-    background-image: radial-gradient(circle,#9650DB,#25005C);
-}
 
-.progress-value{
-    position: absolute;
-}
+

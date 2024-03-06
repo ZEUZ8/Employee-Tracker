@@ -5,7 +5,7 @@ const CircularProgress = () => {
   return (
     <div className="container">
       <div className="circular-progress">
-        <span className="progress-value text-white text-3xl font-bold">07:58</span>
+        <span className="progress-value text-white text-xl font-semibold">07:58</span>
       </div>
     </div>
   );

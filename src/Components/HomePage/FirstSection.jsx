@@ -17,8 +17,8 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 const FirstSection = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
-    <>
-      <div className=" flex justify-end items-end">
+    <div className="grid-rows-6 mt-2">
+      <div className="row-span-1 flex justify-end items-end">
         <div className="flex items-center gap-3">
           <div>
             <p className="text-white text-xl">
@@ -32,26 +32,25 @@ const FirstSection = () => {
           </div>
         </div>
       </div>
-      <div
-        className="absolute text-white z-10 "
-        style={{ top: "12%", right: "10%" }}
-      >
-        <div className="">
-          <img
-            src="/imgs/person.png"
-            className="rounded-full border-2 border-white w-[84px] h-[84px]"
-            alt=""
-          />
-        </div>
-      </div>
-      <div className="text-start mx-12">
+
+      <div className="row-span-2 mt-[2rem] pl-[5rem] pb-2 text-start">
         <div className="text-white">
           <p className="">Hi sinan</p>
           <p className="font-extralight text-xs">Emp ID</p>
         </div>
       </div>
-      <div className="pt-5">
-        <div className=" bg-opacity-5 bg-white border-2 border-white h-full rounded-2xl grid grid-rows-3 text-white backdrop-blur-3xl">
+
+      <div className="row-span-3 p-3">
+        <div className="clockBorder  grid grid-rows-3 text-white  relative ">
+          <div className="translate-y-[-80%] translate-x-[-20px] flex justify-end text-white z-10 absolute right-0">
+            <div className="w-[84px] overflow-hidden aspect-square flex justify-center items-center rounded-full border-2 border-white">
+              <img
+                src="/imgs/person.png"
+                className="  w-full"
+                alt=""
+              />
+            </div>
+          </div>
           <div className="row-span-2 grid justify-center  p-3 pt-5">
             <p className="font-light">Company Name</p>
             <p className="font-extralight flex justify-center items-center gap-1">
@@ -94,7 +93,7 @@ const FirstSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

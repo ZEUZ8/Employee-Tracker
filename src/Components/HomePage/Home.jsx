@@ -23,10 +23,9 @@ const Home = () => {
   const percentage = 66;
   const [isChecked, setIsChecked] = useState(false);
   return (
-    <>
-      <div className="relativ w-[100%] h-[100vh]  broder-5">
+      <div className="relative w-[100%] h-[100vh]  broder-5">
         <img
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          className="absolute translate-y-[-2rem] inset-0 w-[430px] aspect-auto  opacity-25"
           src="/imgs/shape(3).png"
           alt="Background Image"
         />
@@ -41,10 +40,10 @@ const Home = () => {
           alt="Background Image"
         />
         <div className="absolute inset-0 grid grid-rows-12 ">
-          <div className="row-span-6 p-5">
+          <div className="row-span-6 p-5 relative">
             <FirstSection />
           </div>
-          <div className="row-span-5 p-4 ">
+          <div className="row-span-5">
             <CenterSection />
           </div>
           <div className="row-span-1 row-start-12 rounded-t-2xl bg-[#24074F]  grid items-center max-w-[100%] ">
@@ -93,7 +92,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

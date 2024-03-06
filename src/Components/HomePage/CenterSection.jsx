@@ -8,15 +8,14 @@ import CircularProgress from "./CircularProgress";
 
 const CenterSection = () => {
   return (
-    <div className="grid gap-2">
-        
-      <div className=" grid justify-center items-center ">
+    <>
+      <div className="row-span-3 grid justify-center items-center ">
         <div>
           <CircularProgress />
         </div>
       </div>
 
-      <div className=" text-white grid">
+      <div className="row-span-1 text-white grid">
         <div className="grid grid-cols-3 items-center justify-around">
           <div className="flex flex-col justify-center items-center gap-1">
             <p className="text-2xl">
@@ -42,7 +41,7 @@ const CenterSection = () => {
         </div>
       </div>
 
-      <div className="  flex w-full ">
+      <div className="row-span-2  flex w-full ">
         <div className="flex-1 ">
           <div className=" bg-white h-[4rem] flex  items-center justify-between rounded-2xl px-3">
             <div className="text-xl font-bold text-gray-400">
@@ -54,7 +53,7 @@ const CenterSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
