@@ -36,8 +36,8 @@ body{
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 300px;
-  height: 50px;
+  width: 17rem;
+  height: 3.2rem;
   /* background: linear-gradient(180edg,#7C3FD7,#B28AEE); */
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7));
   position: relative;
@@ -57,13 +57,9 @@ body{
   transition: 0.8s;
 }
 
-
-.arrow:checked::after{
-  transform:translateX(25px);
-}
 /* Style for the toggle button when checked */
 .toggle-btn:checked::after {
-  transform: translateX(250px);
+  transform: translateX(223px);
 }
 
 .bg-gradient{
