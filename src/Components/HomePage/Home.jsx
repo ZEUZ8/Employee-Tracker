@@ -23,30 +23,31 @@ const Home = () => {
   const percentage = 66;
   const [isChecked, setIsChecked] = useState(false);
   return (
-      <div className="relative w-[100%] h-[100vh]  broder-5">
-        <img
-          className="absolute translate-y-[-2rem] inset-0 w-[430px] aspect-auto  opacity-25"
-          src="/imgs/shape(3).png"
-          alt="Background Image"
-        />
-        <img
-          className="absolute top-[40%] left-0 opacity-25"
-          src="/imgs/shapes(1).png"
-          alt="Background Image"
-        />
-        <img
-          className="absolute top-[35%] right-0 opacity-25"
-          src="/imgs/shapes(2).png"
-          alt="Background Image"
-        />
-        <div className="absolute inset-0 grid grid-rows-12 ">
-          <div className="row-span-6 p-5 relative">
-            <FirstSection />
-          </div>
-          <div className="row-span-5">
-            <CenterSection />
-          </div>
-          <div className="row-span-1 row-start-12 rounded-t-2xl bg-[#24074F]  grid items-center max-w-[100%] ">
+    <div className="relative w-[100vw] h-[100vh]">
+      <img
+        className="absolute translate-y-[-2rem] inset-0 w-[430px] aspect-auto  opacity-25"
+        src="/imgs/shape(3).png"
+        alt="Background Image"
+      />
+      <img
+        className="absolute top-[40%] left-0 opacity-25"
+        src="/imgs/shapes(1).png"
+        alt="Background Image"
+      />
+      <img
+        className="absolute top-[35%] right-0 opacity-25"
+        src="/imgs/shapes(2).png"
+        alt="Background Image"
+      />
+      <div className="absolute inset-0 grid grid-rows-12 ">
+        <div className="row-span-6 p-5 relative">
+          <FirstSection />
+        </div>
+        <div className="row-span-5">
+          <CenterSection />
+        </div>
+        <div className="fixed bottom-0 left-0 w-full ">
+          <div className="w-full row-start-12 rounded-t-2xl bg-[#24074F]  grid items-center max-w-[100vw] py-2">
             <div className="grid grid-cols-5  text-white text-xs">
               <div className="grid justify-center items-center gap-1">
                 <div className="flex justify-center">
@@ -92,6 +93,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

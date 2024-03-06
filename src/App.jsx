@@ -11,7 +11,7 @@ import FirstSection from "./Components/HomePage/FirstSection";
 function App() {
   return (
     <BrowserRouter>
-      <main className="h-[100vh]">
+      <main className="max-h-[100vh]">
         <Routes>
           <Route path="/" element={<LoginPage/>}/>
           <Route path="/home" element={<Home/>}/>
