@@ -15,7 +15,7 @@ const CenterSection = () => {
         </div>
       </div>
 
-      <div className="row-span-1 text-white grid">
+      <div className="row-span-1 text-white grid ">
         <div className="grid grid-cols-3 items-center justify-around">
           <div className="flex flex-col justify-center items-center gap-1">
             <p className="text-2xl">

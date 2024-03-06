@@ -5,18 +5,18 @@
 
 #root {
   margin: 0;
-  text-align: center;
+  /* text-align: center; */
   padding: 0;
-  background: linear-gradient(180deg, #25005C, #40009D);
-  height: 100vh;
+  min-height: 90vh;
 }
 body{
   margin: 0;
   padding: 0;
   min-width: 300px;
-  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #25005C, #40009D);
 }
-  
+
 
 .finger-gradient{
   background: linear-gradient(180deg,#6272C5,#8160B6);
