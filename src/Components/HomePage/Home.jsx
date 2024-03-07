@@ -7,15 +7,6 @@ import { RxExit } from "react-icons/rx";
 import { BsPersonFillLock } from "react-icons/bs";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { FaPlayCircle } from "react-icons/fa";
-import { GoBell } from "react-icons/go";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { IoLocationOutline } from "react-icons/io5";
-import { TbClock24 } from "react-icons/tb";
-import { TbClockOff } from "react-icons/tb";
-import { FaClockRotateLeft } from "react-icons/fa6";
-import CircularProgress from "./CircularProgress";
 import CenterSection from "./CenterSection";
 import FirstSection from "./FirstSection";
 
@@ -40,13 +31,13 @@ const Home = () => {
         alt="Background Image"
       />
       <div className="absolute inset-0 ">
-        <div className=" p-5 relative">
-          <FirstSection />
+        <div className=" px-5 pt-3 relative ">
+          <FirstSection/>
         </div>
-        <div className="  px-2 grid gap-2  pb-[4rem]">
+        <div className="  px-2 grid gap-2   h-[50%]">
           <CenterSection />
         </div>
-        <div className="fixed bottom-0 left-0 w-full ">
+        <div className="fixed bottom-0 left-0 w-full  ">
           <div className="w-full row-start-12 rounded-t-2xl bg-[#24074F]  grid items-center max-w-[100vw] py-2 ">
             <div className="grid grid-cols-5  text-white text-xs">
               <div className="grid justify-center items-center gap-1">

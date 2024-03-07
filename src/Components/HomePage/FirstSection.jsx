@@ -18,7 +18,7 @@ const FirstSection = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <div className="">
-      <div className=" flex justify-end items-end pb-4">
+      <div className=" flex justify-end items-end pb-3">
         <div className="flex items-center gap-3">
           <div>
             <p className="text-white text-lg flex items-center justify-center">
@@ -26,7 +26,7 @@ const FirstSection = () => {
             </p>
           </div>
           <div>
-            <p className="rounded-full bg-[#5015A6] p-2 text-sm text-white ">
+            <p className="rounded-full bg-[#5015A6] p-2 text-xs text-white ">
               <GiHamburgerMenu />
             </p>
           </div>
@@ -40,7 +40,7 @@ const FirstSection = () => {
         </div>
       </div>
 
-      <div className=" p-2 ">
+      <div className=" p-0">
         <div className="clockBorder  grid text-white  relative ">
           <div className="translate-y-[-80%] translate-x-[-20px] flex justify-end text-white z-10 absolute right-0">
             <div className="w-[84px] overflow-hidden aspect-square flex justify-center items-center rounded-full border-2 border-white">
@@ -55,7 +55,7 @@ const FirstSection = () => {
               </span>{" "}
               location
             </p>
-            <h1 className="text-4xl p-2">10:26 AM</h1>
+            <h1 className="text-4xl p-1">10:26 AM</h1>
             <p className="text-md font-light">12 March 2024</p>
           </div>
 
