@@ -30,11 +30,11 @@ const Home = () => {
         src="/imgs/shapes(2).png"
         alt="Background Image"
       />
-      <div className="absolute overflow-auto inset-0 h-[92vh] flex flex-col ">
-        <div className=" test px-5 pt-3  relative max-h-1/2  ">
+      <div className="absolute overflow-auto inset-0 h-[100vh] flex flex-col ">
+        <div className=" test    relative max-h-1/2  ">
           <FirstSection/>
         </div>
-        <div className="  px-2 grid gap-2 h-1/2">
+        <div className="  px-2 grid gap-2 max-h-1/2">
           <CenterSection />
         </div>
         <div className="fixed bottom-0 left-0 w-full  ">

@@ -40,8 +40,8 @@ const FirstSection = () => {
         </div>
       </div>
 
-      <div className=" p-0">
-        <div className="clockBorder  grid text-white  relative ">
+      <div className=" flex items-center justify-center">
+        <div className="clockBorder w-[85%]  grid text-white  relative backdrop-blur-lg bg-white bg-opacity-5">
           <div className="translate-y-[-80%] translate-x-[-20px] flex justify-end text-white z-10 absolute right-0">
             <div className="w-[84px] overflow-hidden aspect-square flex justify-center items-center rounded-full border-2 border-white">
               <img src="/imgs/person.png" className="  w-full" alt="" />

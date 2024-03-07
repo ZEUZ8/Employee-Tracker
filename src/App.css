@@ -79,6 +79,13 @@ body{
     max-height: 100vh;
   }
 }
+@media only screen  and (max-height: 667px) {
+  .extra{
+    /* justify-content: end; */
+    /* background: green; */
+  }
+}
+
 
 
 
