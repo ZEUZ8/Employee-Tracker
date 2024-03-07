@@ -72,3 +72,14 @@ body{
 }
 
 
+
+@media only screen  and (max-height: 667px) {
+  .test{
+    height: auto;
+    max-height: 100vh;
+  }
+}
+
+
+
+
