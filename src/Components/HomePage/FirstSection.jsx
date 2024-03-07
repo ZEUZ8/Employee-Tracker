@@ -18,7 +18,7 @@ const FirstSection = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <div className="">
-      <div className=" flex justify-end items-end pb-3">
+      <div className=" flex justify-end items-end pb-4">
         <div className="flex items-center gap-3">
           <div>
             <p className="text-white text-lg flex items-center justify-center">
@@ -26,7 +26,7 @@ const FirstSection = () => {
             </p>
           </div>
           <div>
-            <p className="rounded-full bg-[#5015A6] p-2 text-xs text-white ">
+            <p className="rounded-full bg-[#5015A6] p-3 text-md text-white ">
               <GiHamburgerMenu />
             </p>
           </div>

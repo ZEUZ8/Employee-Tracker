@@ -11,13 +11,11 @@ import FirstSection from "./Components/HomePage/FirstSection";
 function App() {
   return (
     <BrowserRouter>
-      <main className="min-h-[100vh] pb-[10vh]">
         <Routes>
           <Route path="/" element={<LoginPage/>}/>
           <Route path="/home" element={<Home/>}/>
           <Route path="/test" element={<FirstSection/>}/>
         </Routes>
-      </main>
     </BrowserRouter>
   );
 }

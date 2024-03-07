@@ -8,7 +8,7 @@ import CircularProgress from "./CircularProgress";
 
 const CenterSection = () => {
   return (
-    <div className="flex flex-col gap-1 h-full ">
+    <div className="grid gap-1">
       <div className="grid justify-center items-center ">
         <div>
           <CircularProgress />

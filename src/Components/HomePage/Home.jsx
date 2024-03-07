@@ -21,7 +21,7 @@ const Home = () => {
         alt="Background Image"
       />
       <img
-        className="absolute top-[40%] left-0 opacity-25"
+        className="absolute translate-y-[15rem] inset-0  opacity-25"
         src="/imgs/shapes(1).png"
         alt="Background Image"
       />
@@ -30,11 +30,11 @@ const Home = () => {
         src="/imgs/shapes(2).png"
         alt="Background Image"
       />
-      <div className="absolute inset-0 max-h-[90vh]">
-        <div className=" px-5 pt-3 relative ">
+      <div className="absolute inset-0 h-[90vh] flex flex-col gap-5">
+        <div className=" px-5 pt-3 relative h-1/2  ">
           <FirstSection/>
         </div>
-        <div className="  px-2 grid gap-2 ">
+        <div className="  px-2 grid gap-2 h-1/2">
           <CenterSection />
         </div>
         <div className="fixed bottom-0 left-0 w-full  ">
