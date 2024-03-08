@@ -48,7 +48,7 @@ const FirstSection = () => {
             </div>
           </div>
           <div className=" grid justify-center  p-3 text-center">
-            <p className="font-light text-md">Company Name</p>
+            <p className="font-light text-sm">Company Name</p>
             <p className="font-light text-xs flex justify-center items-center gap-1">
               <span>
                 <IoLocationSharp />
@@ -56,7 +56,7 @@ const FirstSection = () => {
               location
             </p>
             <h1 className="text-3xl p-1">10:26 AM</h1>
-            <p className="text-sm font-light">12 March 2024</p>
+            <p className="text-xs font-light">12 March 2024</p>
           </div>
 
           <div className=" grid justify-center ">

@@ -33,11 +33,11 @@ const Home = () => {
       />
       <div className="absolute  inset-0 h-[90vh]   flex flex-col">
 
-        <div className="p-3 test relative h-1/2">
+        <div className="p-3 test relative max-h-1/2">
           <FirstSection />
         </div>
 
-        <div className=" grid gap-2 h-1/2">
+        <div className=" grid gap-2 max-h-1/2">
           <CenterSection />
         </div>
 
