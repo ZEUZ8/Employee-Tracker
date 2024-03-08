@@ -8,7 +8,7 @@ import CircularProgress from "./CircularProgress";
 
 const CenterSection = () => {
   return (
-    <div className="chumma grid gap-1">
+    <div className="chumma grid gap-3">
       <div className="grid justify-center items-center ">
         <div>
           <CircularProgress />
