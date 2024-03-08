@@ -14,8 +14,8 @@
     position: relative;
     background: white;
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background: white;
     display: flex;
@@ -24,8 +24,8 @@
 }
 .circular-progress {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   /* background: conic-gradient(from deg, #ededed 4deg, #7d2ae8 10deg); */
   /* background: conic-gradient(red 2.4deg, #ededed 100deg); */
@@ -41,8 +41,8 @@
 .circular-progress::before {
   content: "";
   position: absolute;
-  height: 105px;
-  width: 105px;
+  height: 85px;
+  width: 85px;
   border-radius: 50%;
   background-color: white;
   background-image: radial-gradient(circle, #9650db, #25005c);
