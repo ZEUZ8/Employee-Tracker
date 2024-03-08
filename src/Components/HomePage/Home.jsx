@@ -31,7 +31,7 @@ const Home = () => {
         src="/imgs/shapes(2).png"
         alt="Background Image"
       />
-      <div className="absolute  inset-0 h-[90vh]   flex flex-col">
+      <div className="absolute overflow-hidden  inset-0 h-[90vh]   flex flex-col">
 
         <div className="p-3 test relative max-h-1/2">
           <FirstSection />
