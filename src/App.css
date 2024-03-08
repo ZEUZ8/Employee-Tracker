@@ -85,13 +85,6 @@ body{
     /* background: green; */
   }
 }
-@media only screen  and (max-height: 667px) {
-  .firstBox{
-    /* background: red; */
-  }
-}
-
-
 
 
 

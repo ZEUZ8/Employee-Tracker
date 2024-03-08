@@ -17,16 +17,16 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 const FirstSection = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
-    <div className="max-h-[100%]">
+    <div className="">
       <div className=" flex justify-end items-end pb-4">
         <div className="flex items-center gap-3">
           <div>
-            <p className="text-white text-md flex items-center justify-center">
+            <p className="text-white text-lg flex items-center justify-center">
               <GoBell />
             </p>
           </div>
           <div>
-            <p className="rounded-full bg-[#5015A6] p-2 text-xs text-white ">
+            <p className="rounded-full bg-[#5015A6] p-3 text-md text-white ">
               <GiHamburgerMenu />
             </p>
           </div>
@@ -35,8 +35,8 @@ const FirstSection = () => {
 
       <div className="mt-2 pl-[4rem] pb-2 text-start">
         <div className="text-white">
-          <p className="text-xs">Hi sinan</p>
-          <p className="font-extralight text-[.5rem] ">Emp ID</p>
+          <p className="text-sm">Hi sinan</p>
+          <p className="font-extralight text-xs ">Emp ID</p>
         </div>
       </div>
 
@@ -48,15 +48,15 @@ const FirstSection = () => {
             </div>
           </div>
           <div className=" grid justify-center  p-3 text-center">
-            <p className="font-light text-xs">Company Name</p>
-            <p className="font-light text-[.5rem] flex justify-center items-center gap-1">
+            <p className="font-light text-sm">Company Name</p>
+            <p className="font-light text-xs flex justify-center items-center gap-1">
               <span>
                 <IoLocationSharp />
               </span>{" "}
               location
             </p>
-            <h1 className="text-2xl p-1">10:26 AM</h1>
-            <p className="text-sm font-light">12 March 2024</p>
+            <h1 className="text-4xl p-1">10:26 AM</h1>
+            <p className="text-md font-light">12 March 2024</p>
           </div>
 
           <div className=" grid justify-center ">
