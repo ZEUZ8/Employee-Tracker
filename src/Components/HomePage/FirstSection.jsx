@@ -26,14 +26,14 @@ const FirstSection = () => {
             </p>
           </div>
           <div>
-            <p className="rounded-full bg-[#5015A6] p-3 text-md text-white ">
+            <p className="rounded-full bg-[#5015A6] p-2 text-sm text-white ">
               <GiHamburgerMenu />
             </p>
           </div>
         </div>
       </div>
 
-      <div className="mt-2 pl-[4rem] pb-2 text-start">
+      <div className="mt-1 pl-[4rem] pb-2 text-start">
         <div className="text-white">
           <p className="text-sm">Hi sinan</p>
           <p className="font-extralight text-xs ">Emp ID</p>

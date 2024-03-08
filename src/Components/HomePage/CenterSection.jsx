@@ -18,21 +18,21 @@ const CenterSection = () => {
       <div className=" text-white grid ">
         <div className="grid grid-cols-3 items-center justify-around">
           <div className="flex flex-col justify-center items-center gap-1">
-            <p className="text-xl">
+            <p className="text-lg">
               <FaClockRotateLeft />
             </p>
             <p className="text-sm">10:45 AM</p>
             <p className="text-xs font-extralight opacity-50">Check in</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
-            <p className="text-xl">
+            <p className="text-lg">
               <TbClockOff />
             </p>
             <p className="text-sm">10:45 AM</p>
             <p className="text-xs font-extralight opacity-50">Check Out</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
-            <p className="text-xl">
+            <p className="text-lg">
               <TbClock24 />
             </p>
             <p className="text-sm">7:58 Hrs</p>
@@ -43,7 +43,7 @@ const CenterSection = () => {
 
       <div className="extra flex justify-center items-center w-full pb-4 px-2">
         <div className="flex-1 ">
-          <div className=" bg-white h-[4rem] flex  items-center justify-between rounded-2xl px-3">
+          <div className=" bg-white h-[3rem] flex  items-center justify-between rounded-2xl p-3">
             <div className="text-lg font-bold text-gray-400">
               Name your activity
             </div>
