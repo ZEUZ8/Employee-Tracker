@@ -31,15 +31,61 @@ const Home = () => {
         src="/imgs/shapes(2).png"
         alt="Background Image"
       />
-      <div className="absolute  inset-0 h-[90vh]   grid grid-rows-2 ">
-        <div className="p-3 test relative   ">
+      <div className="absolute  inset-0 h-[90vh]   flex flex-col">
+
+        <div className="p-3 test relative h-1/2">
           <FirstSection />
         </div>
-        <div className=" grid gap-2 ">
+
+        <div className=" grid gap-2 h-1/2">
           <CenterSection />
         </div>
+
         <div className="fixed bottom-0 left-0 w-full  ">
-          <Footer/>
+          <div className="w-full row-start-12 rounded-t-2xl bg-[#24074F]  grid items-center max-w-[100vw] py-2 ">
+            <div className="grid grid-cols-5  text-white text-xs">
+              <div className="grid justify-center items-center gap-1">
+                <div className="flex justify-center">
+                  <MdHomeFilled className="text-white text-xl" />
+                </div>
+                <p className="text-white font-extralight text-xs opacity-75">
+                  Home
+                </p>
+              </div>
+              <div className="grid justify-center items-center gap-1">
+                <div className="flex justify-center">
+                  <LuCalendarDays className="text-white text-xl" />
+                </div>
+                <p className="text-white font-extralight text-xs opacity-75">
+                  Attendence
+                </p>
+              </div>
+              <div className="grid justify-center items-center gap-1">
+                <div className="flex justify-center">
+                  <LiaClipboardListSolid className="text-white text-xl" />
+                </div>
+                <p className="text-white font-extralight text-xs opacity-75">
+                  Tasks
+                </p>
+              </div>
+              <div className="grid justify-center items-center gap-1">
+                <div className="flex justify-center">
+                  <RxExit className="text-white text-xl" />
+                </div>
+                <p className="text-white  font-extralight text-xs opacity-75">
+                  Leaves
+                </p>
+              </div>
+              <div className="grid justify-center items-center gap-1">
+                <div className="flex justify-center">
+                  <BsPersonFillLock className="text-white text-xl" />
+                </div>
+                <p className="text-white font-extralight text-xs opacity-75">
+                  My
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

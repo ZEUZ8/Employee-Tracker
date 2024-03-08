@@ -41,7 +41,7 @@ const CenterSection = () => {
         </div>
       </div>
 
-      <div className="extra flex justify-center items-center w-full px-2">
+      <div className="extra flex justify-center items-center w-full pb-4 px-2">
         <div className="flex-1 ">
           <div className=" bg-white h-[4rem] flex  items-center justify-between rounded-2xl px-3">
             <div className="text-lg font-bold text-gray-400">
