@@ -43,7 +43,7 @@ const FirstSection = () => {
       <div className="firstBox flex items-center justify-center">
         <div className="clockBorder w-[85%]  grid text-white  relative backdrop-blur-lg bg-white bg-opacity-5">
           <div className="translate-y-[-80%] translate-x-[-20px] flex justify-end text-white z-10 absolute right-0">
-            <div className="w-[74px] overflow-hidden aspect-square flex justify-center items-center rounded-full border-2 border-white">
+            <div className="profile w-[84px]  overflow-hidden aspect-square flex justify-center items-center rounded-full border-2 border-white">
               <img src="/imgs/person.png" className="  w-full" alt="" />
             </div>
           </div>
@@ -62,15 +62,15 @@ const FirstSection = () => {
           <div className=" grid justify-center ">
             <hr className="text-white w-[90%] mx-auto " />
 
-            <div className="relative flex justify-center items-center p-2">
-              <p className="absolute z-20 text-white text-sm">Slide to Attendance</p>
+            <div className="relative flex justify-center items-center  p-2 ">
+              <p className="absolute z-20 text-white text-sm pl-5">Slide to Attendance</p>
               <label class="switch relative flex  items-center ">
-                <div className="absolute z-20  ">
+                <div className="absolute z-20 arrow-mark">
                   <p
                     style={{
                       transition: "transform 0.8s ease",
                     }}
-                    className={`${isChecked&&"updated" } arrow text-red-500 font-normal text-sm p-3`}
+                    className={`${isChecked&&"updated" } arrow text-red-500 font-normal text-sm   `}
                   >
                     <FaArrowRightLong />
                   </p>

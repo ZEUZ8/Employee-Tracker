@@ -10,6 +10,7 @@ import "react-circular-progressbar/dist/styles.css";
 import CenterSection from "./CenterSection";
 import FirstSection from "./FirstSection";
 import Footer from "./Footer";
+import "./style.css"
 
 const Home = () => {
   const percentage = 66;
@@ -33,11 +34,11 @@ const Home = () => {
       />
       <div className="absolute overflow-hidden  inset-0 h-[90vh]   flex flex-col">
 
-        <div className="p-3 test relative max-h-1/2">
+        <div className="first-section p-3 test relative h-1/2">
           <FirstSection />
         </div>
 
-        <div className=" grid gap-2 max-h-1/2">
+        <div className="first-section grid gap-2 h-1/2">
           <CenterSection />
         </div>
 

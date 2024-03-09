@@ -57,7 +57,9 @@ body{
   left: 3px;
   transition: 0.8s;
 }
-
+.arrow-mark{
+  padding: 1rem;
+}
 /* Style for the toggle button when checked */
 .toggle-btn:checked::after {
   transform: translateX(220px);
@@ -71,7 +73,9 @@ body{
 );
 }
 
-
+.arrow{
+  padding: 3px;
+}
 
 @media only screen  and (max-height: 667px) {
 
@@ -80,7 +84,7 @@ body{
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 213px;
-    height: 37px;
+    height: 50px;
     /* background: linear-gradient(180edg,#7C3FD7,#B28AEE); */
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7));
     position: relative;
@@ -91,22 +95,23 @@ body{
   .toggle-btn::after {
     content: '';
     position: absolute;
-    width: 31px;
-    height: 31px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border-radius: 50%;
-    top: 3px;
-    left: 3px;
+    top: 5px;
+    left: 4px;
     transition: 0.8s;
   }
   .updated{
-    transform: translateX(175px);
+    transform: translateX(165px);
   }
-
+  .arrow-mark{
+    padding: .8rem;
+  }
   .toggle-btn:checked::after {
-    transform: translateX(175px);
+    transform: translateX(165px);
   }
-  
 }
 
 
