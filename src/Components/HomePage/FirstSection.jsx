@@ -16,6 +16,14 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 
 const FirstSection = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const handleSwipeRight = () => {
+    console.log("Swiped!");
+    // Perform actions on swipe
+  };
+  const handleSwipeLeft = () => {
+    console.log("Swiped!");
+    // Perform actions on swipe
+  };
   return (
     <div className="">
       <div className=" flex justify-end items-end pb-2">
@@ -61,6 +69,7 @@ const FirstSection = () => {
 
           <div className=" grid justify-center ">
             <hr className="text-white w-[90%] mx-auto " />
+
 
             <div className="relative flex justify-center items-center  p-2 ">
               <p className="absolute z-20 text-white text-sm pl-5">Slide to Attendance</p>

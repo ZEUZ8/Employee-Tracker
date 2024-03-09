@@ -5,13 +5,15 @@ import { TbClock24 } from "react-icons/tb";
 import { TbClockOff } from "react-icons/tb";
 import { FaClockRotateLeft } from "react-icons/fa6";
 import CircularProgress from "./CircularProgress";
+import Page from "../test/page";
 
 const CenterSection = () => {
   return (
     <div className="chumma grid gap-2">
       <div className="grid justify-center items-center ">
         <div>
-          <CircularProgress />
+          {/* <CircularProgress /> */}
+          <Page/>
         </div>
       </div>
 
