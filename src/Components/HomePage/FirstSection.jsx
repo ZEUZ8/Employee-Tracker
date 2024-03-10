@@ -13,6 +13,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { TbClock24 } from "react-icons/tb";
 import { TbClockOff } from "react-icons/tb";
 import { FaClockRotateLeft } from "react-icons/fa6";
+import Slide from "../test/Slide";
 
 const FirstSection = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -70,8 +71,8 @@ const FirstSection = () => {
           <div className=" grid justify-center ">
             <hr className="text-white w-[90%] mx-auto " />
 
-
-            <div className="relative flex justify-center items-center  p-2 ">
+            <Slide/>
+            {/* <div className="relative flex justify-center items-center  p-2 ">
               <p className="absolute z-20 text-white text-sm pl-5">Slide to Attendance</p>
               <label class="switch relative flex  items-center ">
                 <div className="absolute z-20 arrow-mark">
@@ -92,7 +93,8 @@ const FirstSection = () => {
                 />
                 <span class="slider "></span>
               </label>
-            </div>
+            </div> */}
+
           </div>
         </div>
       </div>
