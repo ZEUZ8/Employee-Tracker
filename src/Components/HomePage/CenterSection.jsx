@@ -10,7 +10,7 @@ import Circle from "../test2/Circle";
 
 const CenterSection = () => {
   return (
-    <div className="chumma grid gap-3">
+    <div className="chumma grid gap-2  pb-2">
       <div className="grid justify-center items-center ">
         <div>
           <CircularProgress />
