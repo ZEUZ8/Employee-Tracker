@@ -25,7 +25,7 @@ const Page = () => {
 
           </linearGradient>
         </defs>
-        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        <circle cx="86" cy="75" r="65" stroke-linecap="round" />
       </svg>
     </div>
   );

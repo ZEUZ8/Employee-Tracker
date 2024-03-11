@@ -6,14 +6,16 @@ import { TbClockOff } from "react-icons/tb";
 import { FaClockRotateLeft } from "react-icons/fa6";
 import CircularProgress from "./CircularProgress";
 import Page from "../test/page";
+import Circle from "../test2/Circle";
 
 const CenterSection = () => {
   return (
-    <div className="chumma grid gap-2">
+    <div className="chumma grid gap-3">
       <div className="grid justify-center items-center ">
         <div>
-          {/* <CircularProgress /> */}
-          <Page/>
+          <CircularProgress />
+          {/* <Page/> */}
+          {/* <Circle/> */}
         </div>
       </div>
 
