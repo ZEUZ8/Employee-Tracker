@@ -5,8 +5,6 @@ import { TbClock24 } from "react-icons/tb";
 import { TbClockOff } from "react-icons/tb";
 import { FaClockRotateLeft } from "react-icons/fa6";
 import CircularProgress from "./CircularProgress";
-import Page from "../test/page";
-import Circle from "../test2/Circle";
 
 const CenterSection = () => {
   return (

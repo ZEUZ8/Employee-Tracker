@@ -13,7 +13,6 @@ import { IoLocationSharp } from "react-icons/io5";
 import { TbClock24 } from "react-icons/tb";
 import { TbClockOff } from "react-icons/tb";
 import { FaClockRotateLeft } from "react-icons/fa6";
-import Slide from "../test/Slide";
 import "./style.css";
 import Swipe from "../swipe/Swipe";
 

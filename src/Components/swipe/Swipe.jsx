@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import "./sinan.css"
+import { FaArrowRight } from "react-icons/fa6";
 
 const Swipe = () => {
-  const color = 'red';
+  const color = 'white';
   const [unlocked, setUnlocked] = useState(false);
   const slider = useRef(null);
   const container = useRef(null);
@@ -59,7 +60,7 @@ const Swipe = () => {
             style={{ background: color,paddingLeft:'2rem' }}
           >
             <span className='rsbcSliderText  '>{getText()}</span>
-            <span className='rsbcSliderArrow '></span>
+            <span className='rsbcSliderArrow '><FaArrowRight/></span>
             <span className='rsbcSliderCircle ' style={{ background: color }}></span>
           </div>
           <div className='rsbcText'>{getText()}</div>
