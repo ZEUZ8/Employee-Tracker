@@ -6,6 +6,7 @@ import { Routes,Route,BrowserRouter } from "react-router-dom";
 import LoginPage from "./Components/login/LoginPage";
 import Home from "./Components/HomePage/Home";
 import FirstSection from "./Components/HomePage/FirstSection";
+import Swipe from "./Components/swipe/Swipe";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LoginPage/>}/>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/test" element={<FirstSection/>}/>
+          <Route path="/test" element={<Swipe/>}/>
         </Routes>
     </BrowserRouter>
   );

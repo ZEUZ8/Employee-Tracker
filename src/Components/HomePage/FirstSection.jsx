@@ -19,17 +19,6 @@ import Swipe from "../swipe/Swipe";
 
 const FirstSection = () => {
   const [isChecked, setIsChecked] = useState(false);
-  const handleSwipeLeft = () => {
-    console.log('Swiped left!');
-  };
-
-  const handleSwipeRight = () => {
-    console.log('Swiped right!');
-  };
-  const handleSuccess = ()=>{
-    setIsChecked(true)
-    console.log(isChecked)
-  }
   // const handleSwipeRight = () => {
   //   console.log("Swiped!");
   //   // Perform actions on swipe
@@ -81,13 +70,12 @@ const FirstSection = () => {
             <p className="text-xs font-light">12 March 2024</p>
           </div>
 
-          <div className=" grid justify-center items-center ">
-            <hr className="text-white w-[70vw] mx-auto bg-white " />
-
-            {/* <div className="p-2">
-              <Swipe onSwipeLeft={handleSwipeLeft} onSwipeRight={handleSwipeRight} />
-            </div> */}
-            {/* <Slide/> */}
+          <hr className="text-white w-[70vw] mx-auto bg-white " />
+          <div className=" grid justify-center items-center w-full">
+            <div className="p-2  w-[60vw] ">
+              <Swipe />
+            </div>
+            {/* 
             <div className="relative flex justify-center items-center  p-2 ">
               <p className="absolute z-20 text-white text-sm pl-5">Slide to Attendance</p>
               <label class="switch relative flex  items-center ">
@@ -109,7 +97,7 @@ const FirstSection = () => {
                 />
                 <span class="slider "></span>
               </label>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
