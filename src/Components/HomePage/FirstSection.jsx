@@ -69,7 +69,7 @@ const FirstSection = () => {
             <p className="text-xs font-light">12 March 2024</p>
           </div>
 
-          <hr className="text-white w-[70vw] mx-auto bg-white " />
+          <hr className="text-white w-[60vw] mx-auto bg-white " />
           <div className=" grid justify-center items-center w-full">
             <div className="p-2  w-[60vw] ">
               <Swipe />
