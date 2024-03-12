@@ -78,6 +78,14 @@ body{
   padding: 3px;
 }
 
+.circle-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 11rem;
+}
+
 @media only screen  and (max-height: 667px) {
 
   .toggle-btn {
