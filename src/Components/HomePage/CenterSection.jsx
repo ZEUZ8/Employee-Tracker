@@ -18,21 +18,21 @@ const CenterSection = () => {
       <div className=" text-white grid ">
         <div className="grid grid-cols-3 items-center justify-around">
           <div className="flex flex-col justify-center items-center gap-1">
-            <p className="text-xl">
+            <p className="text-md">
               <FaClockRotateLeft />
             </p>
             <p className="text-sm">10:45 AM</p>
             <p className="text-xs font-extralight opacity-50">Check in</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
-            <p className="text-xl">
+            <p className="text-md">
               <TbClockOff />
             </p>
             <p className="text-sm">10:45 AM</p>
             <p className="text-xs font-extralight opacity-50">Check Out</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
-            <p className="text-xl">
+            <p className="text-md">
               <TbClock24 />
             </p>
             <p className="text-sm">7:58 Hrs</p>

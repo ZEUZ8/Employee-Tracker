@@ -53,7 +53,7 @@ const Circle = () => {
 
           const xCoor = chart.getDatasetMeta(0).data[0].x;
           const yCoor = chart.getDatasetMeta(0).data[0].y;
-          ctx.font = "bold 20px sans-serif";
+          ctx.font = "bold 15px sans-serif";
           ctx.fillStyle = "white";
           ctx.textAlign = "center";
           ctx.fillText(`${currentTime % 12 || 12}:${minute.length > 1 ? minute : `0${minute}`}`, xCoor, yCoor);
