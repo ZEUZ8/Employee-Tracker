@@ -29,7 +29,6 @@
 }
 .rsbContainerUnlocked{
   width: 70%!important;
-  margin-left: 15%;
   transition: 0.5s;
   cursor: default;
 }
@@ -127,4 +126,16 @@
     font-size: 12px;
     left: 2rem;
   }
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+
+.chart-canvas{
+  padding: 0;
+  padding-bottom: 2rem;
 }

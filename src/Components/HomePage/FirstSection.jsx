@@ -71,7 +71,7 @@ const FirstSection = () => {
 
           <hr className="text-white w-[60vw] mx-auto bg-white " />
           <div className=" grid justify-center items-center w-full">
-            <div className="p-2  w-[60vw] ">
+            <div className="p-2  w-[60vw] flex justify-center items-center">
               <Swipe />
             </div>
             {/* 

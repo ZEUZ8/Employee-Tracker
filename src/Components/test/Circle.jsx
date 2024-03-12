@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
-import "./circle.css"
+import "./circle.css";
 
 const Circle = () => {
   const chartRef = useRef(null);
@@ -146,11 +146,9 @@ const Circle = () => {
 
   return (
     <>
-        <canvas
-          className="mb-5"
-          style={{ height: "150px", width: "400px" }}
-          ref={chartRef}
-        />
+      <div className="container " style={{width:"15rem",height:"10rem" ,marginTop:"0",padding:"0"}}>
+        <canvas className="chart-canvas" ref={chartRef} />
+      </div>
     </>
   );
 };
