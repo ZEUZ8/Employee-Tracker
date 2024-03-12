@@ -49,7 +49,7 @@ const CenterSection = () => {
               Name your activity
             </div>
             <div>
-              <FaPlayCircle className="text-green-500 text-3xl" />
+              <FaPlayCircle className="text-green-500 text-3xl " />
             </div>
           </div>
         </div>
