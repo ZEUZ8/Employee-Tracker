@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
+import "./circle.css"
 
 const Circle = () => {
   const chartRef = useRef(null);
@@ -42,10 +43,16 @@ const Circle = () => {
           const circleRadius = chart.getDatasetMeta(0).data[0].outerRadius; // Adjust the radius as needed
           ctx.beginPath();
           ctx.arc(centerX, centerY, circleRadius, 0, 2 * Math.PI);
-          const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, circleRadius);
-          gradient.addColorStop(1, '#25005c'); // Starting color (center)
-          gradient.addColorStop(0, '#9650db'); // Ending color (outer edge)
-          
+          const gradient = ctx.createRadialGradient(
+            centerX,
+            centerY,
+            0,
+            centerX,
+            centerY,
+            circleRadius
+          );
+          gradient.addColorStop(1, "#25005c"); // Starting color (center)
+          gradient.addColorStop(0, "#9650db"); // Ending color (outer edge)
 
           // Use the gradient as fill style
           ctx.fillStyle = gradient;
@@ -56,7 +63,13 @@ const Circle = () => {
           ctx.font = "bold 15px sans-serif";
           ctx.fillStyle = "white";
           ctx.textAlign = "center";
-          ctx.fillText(`${currentTime % 12 || 12}:${minute.length > 1 ? minute : `0${minute}`}`, xCoor, yCoor);
+          ctx.fillText(
+            `${currentTime % 12 || 12}:${
+              minute.length > 1 ? minute : `0${minute}`
+            }`,
+            xCoor,
+            yCoor
+          );
         },
       };
 
@@ -131,7 +144,15 @@ const Circle = () => {
     };
   }, [data, labels]);
 
-  return <canvas  className="mb-5" ref={chartRef} />;
+  return (
+    <>
+        <canvas
+          className="mb-5"
+          style={{ height: "150px", width: "400px" }}
+          ref={chartRef}
+        />
+    </>
+  );
 };
 
 export default Circle;

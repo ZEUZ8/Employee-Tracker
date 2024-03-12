@@ -1,7 +1,7 @@
 .ReactSwipeButton {
   float: left;
   width: 100%;
-  height: 50px;
+  height: 40px;
   position: relative;
 }
 .ReactSwipeButton,
@@ -50,7 +50,7 @@
   float: left;
   width: 100%;
   position: absolute;
-  height: 50px;
+  height: 40px;
   top:0;
   left: 50px;
   margin-left:-100%;
@@ -62,7 +62,7 @@
 }
 .rsbcSliderText{
   position: absolute;
-  top:0;
+  top:-0.3rem;
   left:0;
   right:0;
   line-height: 50px;
@@ -101,7 +101,7 @@
 .rsbcText {
   float: left;
   position: absolute;
-  top:0;
+  top:-0.3rem;
   left:1rem;
   right:0;
   height: 50px;

@@ -46,11 +46,11 @@ const Swipe = () => {
   };
 
   const getText = () => {
-    return unlocked ? 'Unlocked' : 'Slide to Unlock';
+    return unlocked ? 'Marked' : 'Slide to Unlock';
   };
 
   return (
-      <div className='ReactSwipeButton h-[8rem]'>
+      <div className='ReactSwipeButton   flex justify-center items-center'>
         <div className={`rsbContainer  ${unlocked ? 'rsbContainerUnlocked' : ''}`} ref={container}>
           <div
             className='rsbcSlider '
@@ -61,7 +61,7 @@ const Swipe = () => {
           >
             <span className='rsbcSliderText  '>{getText()}</span>
             <span className='rsbcSliderArrow '><FaArrowRight/></span>
-            <span className='rsbcSliderCircle ' style={{ background: color }}></span>
+            <span className='rsbcSliderCircle ' style={{ background: color ,height:"2.5rem"}}></span>
           </div>
           <div className='rsbcText'>{getText()}</div>
         </div>
