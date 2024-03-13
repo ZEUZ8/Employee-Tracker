@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <div className="w-full row-start-12  rounded-t-2xl bg-[#24074F]  grid items-center max-w-[100vw] py-2 ">
-      <div className="grid grid-cols-5  text-white text-xs">
+      <div className="grid grid-cols-5  text-white">
         <div
           className={`grid justify-center  items-center  gap-1 active:scale-110 ${
             selected === "home" && "scale-105 text-[#802CFA]"
@@ -20,7 +20,7 @@ const Footer = () => {
           onClick={() => setSelected("home")}
         >
           <div className="flex justify-center">
-            <GrHomeRounded className={` text-xl`} />
+            <GrHomeRounded className={` text-md`} />
           </div>
           <p className={`font-extralight text-xs opacity-75`}>Home</p>
         </div>
@@ -31,7 +31,7 @@ const Footer = () => {
           onClick={() => setSelected("attendence")}
         >
           <div className="flex justify-center">
-            <LuCalendarDays className=" text-xl" />
+            <LuCalendarDays className=" text-md" />
           </div>
           <p className=" font-extralight text-xs opacity-75">
             Attendence
@@ -44,7 +44,7 @@ const Footer = () => {
           onClick={() => setSelected("tasks")}
         >
           <div className="flex justify-center">
-            <LiaClipboardListSolid className=" text-xl" />
+            <LiaClipboardListSolid className=" text-md" />
           </div>
           <p className=" font-extralight text-xs opacity-75">Tasks</p>
         </div>
@@ -55,7 +55,7 @@ const Footer = () => {
           onClick={() => setSelected("leaves")}
         >
           <div className="flex justify-center">
-            <RxExit className=" text-xl" />
+            <RxExit className=" text-md" />
           </div>
           <p className="  font-extralight text-xs opacity-75">
             Leaves
@@ -68,7 +68,7 @@ const Footer = () => {
           onClick={() => setSelected("my")}
         >
           <div className="flex justify-center items-center">
-            <BsPersonFillLock className=" text-xl" />
+            <BsPersonFillLock className=" text-md" />
           </div>
           <p className=" text-center font-extralight text-xs opacity-75">My</p>
         </div>
