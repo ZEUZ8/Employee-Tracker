@@ -61,7 +61,7 @@ const Swipe = () => {
           >
             <span className='rsbcSliderText  '>{getText()}</span>
             <span className='rsbcSliderArrow '><FaArrowRight/></span>
-            <span className='rsbcSliderCircle ' style={{ background: color ,height:"2.5rem"}}></span>
+            <span className='rsbcSliderCircle ' style={{ background: color}}></span>
           </div>
           <div className='rsbcText'>{getText()}</div>
         </div>
