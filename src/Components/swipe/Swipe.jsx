@@ -27,7 +27,7 @@ const Swipe = () => {
         slider.current.style.left = "50px"; // Reset slider position
       }, 3000);
     }
-    return () => clearTimeout(timeoutRef.current); // Clear timeout on component unmount or state change
+    return (stopDrag,() => clearTimeout(timeoutRef.current)) // Clear timeout on component unmount or state change
   }, [unlocked]);
 
   const startDrag = (event) => {
@@ -58,12 +58,12 @@ const Swipe = () => {
   };
 
   const stopDrag = () => {
-    // document.removeEventListener('mousemove', handleDrag);
-    // document.removeEventListener('touchmove', handleDrag);
-    // document.removeEventListener('mouseup', stopDrag);
-    // document.removeEventListener('touchend', stopDrag);
-    // // slider.current.style.left = '0px';
-    // initialPosition.current = null;
+    document.removeEventListener('mousemove', handleDrag);
+    document.removeEventListener('touchmove', handleDrag);
+    document.removeEventListener('mouseup', stopDrag);
+    document.removeEventListener('touchend', stopDrag);
+    // slider.current.style.left = '0px';
+    initialPosition.current = null;
   };
 
   const getText = () => {
