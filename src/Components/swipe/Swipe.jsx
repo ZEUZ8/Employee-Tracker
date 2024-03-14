@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./sinan.css";
 import { FaArrowRight } from "react-icons/fa6";
+import { AppContext } from "../../context/AppProvider";
 
 const Swipe = () => {
+  const {time,setTime,history,setHistory} = useContext(AppContext)
   const color = "white";
   const [unlocked, setUnlocked] = useState(false);
   const [status, setStatus] = useState("CHECK IN");
-  const [time, setTime] = useState({ hour: "", minute: "", status: "" });
-  const [history, setHistory] = useState([]);
   const slider = useRef(null);
   const container = useRef(null);
   const initialPosition = useRef(null);
@@ -111,7 +111,7 @@ const Swipe = () => {
             status === "CHECK OUT" ? "text-red-700" : "text-white"
           }`}
         >
-          {status}
+          {` ${status}`}
         </div>
       </div>
     </div>
