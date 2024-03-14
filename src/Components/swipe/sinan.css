@@ -67,8 +67,8 @@
   line-height: 50px;
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  letter-spacing: 2px;
-  font-size: 13px;
+  /* letter-spacing: 2px; */
+  font-size: 11px;
 
 }
 .rsbcSliderArrow{
@@ -116,14 +116,15 @@
   .rsbcText{
     letter-spacing:1px;
     font-size: 10px;
-    left: 2rem;
+    /* left: 1rem; */
   }
+
 }
 @media only screen  and (max-height: 900px) {
   .rsbcText{
     letter-spacing:1px;
     font-size: 12px;
-    left: 2rem;
+    /* left: 1rem; */
   }
 }
 

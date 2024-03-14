@@ -7,7 +7,7 @@ const Swipe = () => {
   const {time,setTime,history,setHistory} = useContext(AppContext)
   const color = "white";
   const [unlocked, setUnlocked] = useState(false);
-  const [status, setStatus] = useState("CHECK IN");
+  const [status, setStatus] = useState("Check In");
   const slider = useRef(null);
   const container = useRef(null);
   const initialPosition = useRef(null);
@@ -16,10 +16,10 @@ const Swipe = () => {
   useEffect(() => {
     if (unlocked) {
       setStatus((prev) => {
-        if (prev === "CHECK OUT") {
-          return "CHECK IN";
+        if (prev === "Check Out") {
+          return "Check In";
         } else {
-          return "CHECK OUT";
+          return "Check Out";
         }
       });
       timeoutRef.current = setTimeout(() => {
@@ -100,7 +100,7 @@ const Swipe = () => {
           onTouchStart={startDrag}
           style={{ background: color }}
         >
-          <span className={`rsbcSliderText ${"text-green-600"}`}>Marked</span>
+          <span className={`rsbcSliderText ${"text-green-600"}`}>{`${status === 'Check In' ? "Check Out " : "Check In"} successful`}</span>
           <span className="rsbcSliderArrow ">
             <FaArrowRight />
           </span>
@@ -108,7 +108,7 @@ const Swipe = () => {
         </div>
         <div
           className={`rsbcText ${
-            status === "CHECK OUT" ? "text-red-700" : "text-white"
+            status === "Check Out" ? "text-red-700" : "text-white"
           }`}
         >
           {` ${status}`}
