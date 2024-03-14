@@ -115,7 +115,7 @@
   .first-section{
     display: flex;
     flex-direction: column;
-    max-height: 1/2;
+    /* max-height: 1/2; */
   }
   .profile{
     width: 74px;
