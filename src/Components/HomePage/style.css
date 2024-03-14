@@ -113,7 +113,8 @@
     background-image: radial-gradient(circle, #9650db, #25005c);
   }
   .first-section{
-
+    display: flex;
+    flex-direction: column;
   }
   .profile{
     width: 74px;
@@ -126,6 +127,6 @@
 
 @media only screen  and (height: 667px) {
   .first-section{
-
+    
   }
 }
