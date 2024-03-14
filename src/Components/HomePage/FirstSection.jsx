@@ -28,20 +28,7 @@ const FirstSection = () => {
   // };
   return (
     <div className="">
-      <div className=" flex justify-end items-end pb-2">
-        <div className="flex items-center gap-3">
-          <div>
-            <p className="text-white text-lg flex items-center justify-center">
-              <GoBell />
-            </p>
-          </div>
-          <div>
-            <p className="rounded-full bg-[#5015A6] p-2 text-sm text-white ">
-              <GiHamburgerMenu />
-            </p>
-          </div>
-        </div>
-      </div>
+    
 
       <div className="mt-1 pl-[4rem] pb-2 text-start">
         <div className="text-white">

@@ -117,8 +117,27 @@ body{
   }
 }
 
+.first-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+}
 
-
+@media only screen  and (height: 896px) {
+  .first-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+  }
+  .bell{
+    font-size: 1.5rem;
+  }
+  .three-lines{
+    font-size: 1.125.rem;
+  }
+}
 
 
 

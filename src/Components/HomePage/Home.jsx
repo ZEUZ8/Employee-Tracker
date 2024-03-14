@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import BackGround from "../background/backGround";
-import { GrHomeRounded } from "react-icons/gr";
-import { LuCalendarDays } from "react-icons/lu";
-import { LiaClipboardListSolid } from "react-icons/lia";
-import { RxExit } from "react-icons/rx";
-import { BsPersonFillLock } from "react-icons/bs";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { GoBell } from "react-icons/go";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "react-circular-progressbar/dist/styles.css";
 import CenterSection from "./CenterSection";
 import FirstSection from "./FirstSection";
-import Footer from "./Footer"
-import "./style.css"
+import Footer from "./Footer";
+import "./style.css";
 
 const Home = () => {
   const percentage = 66;
@@ -33,17 +28,30 @@ const Home = () => {
         alt="Background Image"
       />
       <div className="absolute   inset-0 h-[90vh]   flex flex-col">
-
+        <div className=" flex justify-end items-end px-5 pt-4 pb-3">
+          <div className="flex items-center gap-3">
+            <div>
+              <p className="bell text-white text-lg flex items-center justify-center">
+                <GoBell />
+              </p>
+            </div>
+            <div>
+              <p className="three-lines rounded-full bg-[#5015A6] p-2 text-sm text-white ">
+                <GiHamburgerMenu />
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="first-section px-3 pt-3 test relative ">
           <FirstSection />
         </div>
 
-        <div className="first-section grid gap-2  ">
+        <div className="second-section grid gap-2">
           <CenterSection />
         </div>
 
         <div className="fixed bottom-0 left-0 w-full  ">
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </div>
