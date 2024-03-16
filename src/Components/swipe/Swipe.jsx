@@ -4,30 +4,42 @@ import { FaArrowRight } from "react-icons/fa6";
 import { AppContext } from "../../context/AppProvider";
 
 const Swipe = () => {
-  const {time,setTime,history,setHistory} = useContext(AppContext)
+  const { time, setTime, history, setHistory } = useContext(AppContext);
   const color = "white";
   const [unlocked, setUnlocked] = useState(false);
-  const [status, setStatus] = useState("Check In");
+  const [status, setStatus] = useState(true);
   const slider = useRef(null);
   const container = useRef(null);
   const initialPosition = useRef(null);
   const timeoutRef = useRef(null);
 
+  function getTime() {
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    return { hours, minutes };
+  }
+
   useEffect(() => {
     if (unlocked) {
+      const currentTime = getTime();
+      const time = { time: `${currentTime?.hours}:${currentTime?.minutes}`,status: status?"checkIn":"checkOut",}
+      // setTime(time);
+      if (time.status) {
+        setHistory((prev) => {
+          return [...prev, time];
+        });
+      }
       setStatus((prev) => {
-        if (prev === "Check Out") {
-          return "Check In";
-        } else {
-          return "Check Out";
-        }
+        return !prev;
       });
       timeoutRef.current = setTimeout(() => {
         setUnlocked(false);
         slider.current.style.left = "50px"; // Reset slider position
       }, 3000);
     }
-    return (stopDrag,() => clearTimeout(timeoutRef.current)) // Clear timeout on component unmount or state change
+
+    return stopDrag, () => clearTimeout(timeoutRef.current); // Clear timeout on component unmount or state change
   }, [unlocked]);
 
   const startDrag = (event) => {
@@ -58,10 +70,10 @@ const Swipe = () => {
   };
 
   const stopDrag = () => {
-    document.removeEventListener('mousemove', handleDrag);
-    document.removeEventListener('touchmove', handleDrag);
-    document.removeEventListener('mouseup', stopDrag);
-    document.removeEventListener('touchend', stopDrag);
+    document.removeEventListener("mousemove", handleDrag);
+    document.removeEventListener("touchmove", handleDrag);
+    document.removeEventListener("mouseup", stopDrag);
+    document.removeEventListener("touchend", stopDrag);
     // slider.current.style.left = '0px';
     initialPosition.current = null;
   };
@@ -71,20 +83,19 @@ const Swipe = () => {
   };
 
   useEffect(() => {
-    const date = new Date();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    setTime({ time: hours, minute: minutes, status: status });
-
-    if (time.status) {
-      setHistory((prev) => {
-        return [...prev, time];
-      });
-    }
-  }, [status]);
+    // const currentTime = getTime()
+    // setTime({ time: `${currentTime?.hours}:${currentTime?.minutes}`, status: status });
+    // if (time.status) {
+    //   setHistory((prev) => {
+    //     return [...prev, time];
+    //   });
+    // }
+    console.log(status,'consoling the status')
+    console.log(history,' consoling the history')
+  }, [history]);
 
   useEffect(() => {
-    console.log(history,' CONSOLING THE USER HISTORY');
+    console.log(history, " CONSOLING THE USER HISTORY");
   }, [history]);
 
   return (
@@ -100,18 +111,16 @@ const Swipe = () => {
           onTouchStart={startDrag}
           style={{ background: color }}
         >
-          <span className={`rsbcSliderText ${"text-green-600"}`}>{`${status === 'Check In' ? "Check Out " : "Check In"} successful`}</span>
+          <span className={`rsbcSliderText ${"text-green-600"}`}>{`${
+            status ? "Check Out" : "Check In"
+          } successful`}</span>
           <span className="rsbcSliderArrow ">
             <FaArrowRight />
           </span>
           <span className="rsbcSliderCircle "></span>
         </div>
-        <div
-          className={`rsbcText ${
-            status === "Check Out" ? "text-red-700" : "text-white"
-          }`}
-        >
-          {` ${status}`}
+        <div className={`rsbcText ${status ? "text-white" : "text-red-700"}`}>
+          {` ${status ? "Check In" : "Check Out"}`}
         </div>
       </div>
     </div>

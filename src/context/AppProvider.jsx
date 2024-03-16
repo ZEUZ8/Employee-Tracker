@@ -4,7 +4,7 @@ const AppContext = createContext()
 
 const AppProvider = ({children})=>{
     const [history,setHistory] = useState([])
-    const [time,setTime] = useState({ hour: "", minute: "", status: "" });
+    const [time,setTime] = useState({ time:"", status: "" });
     const [loading,setLoading] = useState(false)
 
     const value ={

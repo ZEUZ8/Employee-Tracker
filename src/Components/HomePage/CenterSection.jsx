@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children, useContext, useEffect, useState } from "react";
 import "react-circular-progressbar/dist/styles.css";
 import { FaPlayCircle } from "react-icons/fa";
 import { TbClock24 } from "react-icons/tb";
@@ -6,14 +6,70 @@ import { TbClockOff } from "react-icons/tb";
 import { FaClockRotateLeft } from "react-icons/fa6";
 import CircularProgress from "./CircularProgress";
 import Circle from "../test/Circle";
+import { AppContext } from "../../context/AppProvider";
 
 const CenterSection = () => {
+  const { history, time } = useContext(AppContext);
+  const [checkIn, setCheckIn] = useState("Pending");
+  const [checkOut, setCheckOut] = useState("Pending");
+  const [workingHours, setWorkingHours] = useState('Pending');
+
+  function gettingTimeFomat(time24) {
+    const [hours, minutes] = time24.split(":").map(Number);
+
+    const period = hours < 12 ? "AM" : "PM";
+
+    let hours12 = hours % 12;
+    hours12 = hours12 === 0 ? 12 : hours12; // Convert 0 to 12 for 12 AM
+
+    // Construct the 12-hour time string
+    const time12 = `${hours12}:${
+      minutes < 10 ? "0" + minutes : minutes
+    } ${period}`;
+
+    console.log(time12);
+    return time12;
+  }
+
+  const getTimeDiff = ()=>{
+    const checkinTimes = []
+    const checkOutTimes = []
+    history.filter((item)=>{
+      console.log(item,' the itemc insit eocne o')
+    })
+  }
+
+  useEffect(() => {
+    if (history.length > 0) {
+      console.log(history, " the consling history");
+      setCheckIn(() => {
+        if (history[0].status === "checkIn") {
+          const time = gettingTimeFomat(history[0].time);
+          return time;
+        }
+      });
+      console.log(history[history.length - 1].status, " the sconsling");
+      if (history.length > 1) {
+        setCheckOut(() => {
+          if (history[history.length-1].status === "checkOut") {
+            const time = gettingTimeFomat(history[history.length-1].time);
+            return time;
+          }
+        });
+      }
+    }
+  }, [history]);
+
+  useEffect(() => {
+    getTimeDiff()
+  },[history]);
+
   return (
     <div className="chumma grid gap-2  pb-2 max-h-[45vh]">
       <div className=" flex justify-center">
         <div className="grid justify-center items-center  circle-div">
           {/* <Circle /> */}
-          <CircularProgress/>
+          <CircularProgress />
         </div>
       </div>
       <div className=" text-white grid ">
@@ -22,14 +78,14 @@ const CenterSection = () => {
             <p className="text-md">
               <FaClockRotateLeft />
             </p>
-            <p className="text-sm">10:45 AM</p>
+            <p className="text-sm">{checkIn}</p>
             <p className="text-xs font-extralight opacity-50">Check in</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
             <p className="text-md">
               <TbClockOff />
             </p>
-            <p className="text-sm">10:45 AM</p>
+            <p className="text-sm">{checkOut}</p>
             <p className="text-xs font-extralight opacity-50">Check Out</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
