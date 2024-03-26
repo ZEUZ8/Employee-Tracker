@@ -13,17 +13,12 @@ const Swipe = () => {
   const initialPosition = useRef(null);
   const timeoutRef = useRef(null);
 
-  function getTime() {
-    const date = new Date();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    return { hours, minutes };
-  }
+
 
   useEffect(() => {
     if (unlocked) {
-      const currentTime = getTime();
-      const time = { time: `${currentTime?.hours}:${currentTime?.minutes}`,status: status?"checkIn":"checkOut",}
+      const currentTime = new Date();
+      const time = { time: currentTime,status: status?"checkIn":"checkOut",}
       // setTime(time);
       if (time.status) {
         setHistory((prev) => {
@@ -89,14 +84,12 @@ const Swipe = () => {
     //   setHistory((prev) => {
     //     return [...prev, time];
     //   });
-    // }
-    console.log(status,'consoling the status')
-    console.log(history,' consoling the history')
+    // // }
+    // console.log(status,'consoling the status')
+    // console.log(history,' consoling the history')
   }, [history]);
 
-  useEffect(() => {
-    console.log(history, " CONSOLING THE USER HISTORY");
-  }, [history]);
+
 
   return (
     <div className="ReactSwipeButton   flex justify-center items-center">

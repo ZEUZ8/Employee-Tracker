@@ -12,10 +12,12 @@ const CenterSection = () => {
   const { history, time } = useContext(AppContext);
   const [checkIn, setCheckIn] = useState("Pending");
   const [checkOut, setCheckOut] = useState("Pending");
-  const [workingHours, setWorkingHours] = useState('Pending');
+  const [workingHours, setWorkingHours] = useState("Pending");
 
   function gettingTimeFomat(time24) {
-    const [hours, minutes] = time24.split(":").map(Number);
+    const date = new Date(time24);
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
 
     const period = hours < 12 ? "AM" : "PM";
 
@@ -31,13 +33,17 @@ const CenterSection = () => {
     return time12;
   }
 
-  const getTimeDiff = ()=>{
-    const checkinTimes = []
-    const checkOutTimes = []
-    history.filter((item)=>{
-      console.log(item,' the itemc insit eocne o')
-    })
-  }
+  const getTimeDiff = (checkIn,checkOut) => {
+    if (history.length > 1) {
+      // for (let log of history) {
+      //   const timeDiff = Math.abs()
+      // }
+      const timeDiff = Math.abs(new Date(checkOut) - new Date(checkIn) )
+      const hours = Math.floor(timeDiff / (1000 * 60 * 60)); // Convert milliseconds to hours
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)); // Convert remaining milliseconds to minutes
+      console.log(hours,minutes,' the diff in the consle')
+    }
+  };
 
   useEffect(() => {
     if (history.length > 0) {
@@ -51,8 +57,8 @@ const CenterSection = () => {
       console.log(history[history.length - 1].status, " the sconsling");
       if (history.length > 1) {
         setCheckOut(() => {
-          if (history[history.length-1].status === "checkOut") {
-            const time = gettingTimeFomat(history[history.length-1].time);
+          if (history[history.length - 1].status === "checkOut") {
+            const time = gettingTimeFomat(history[history.length - 1].time);
             return time;
           }
         });
@@ -61,8 +67,8 @@ const CenterSection = () => {
   }, [history]);
 
   useEffect(() => {
-    getTimeDiff()
-  },[history]);
+    getTimeDiff();
+  }, [history]);
 
   return (
     <div className="chumma grid gap-2  pb-2 max-h-[45vh]">
