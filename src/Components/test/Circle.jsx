@@ -60,7 +60,7 @@ const Circle = () => {
 
           const xCoor = chart.getDatasetMeta(0).data[0].x;
           const yCoor = chart.getDatasetMeta(0).data[0].y;
-          ctx.font = "bold 15px sans-serif";
+          ctx.font = "bold 12px sans-serif";
           ctx.fillStyle = "white";
           ctx.textAlign = "center";
           ctx.fillText(
@@ -82,29 +82,30 @@ const Circle = () => {
           const angle = Math.PI / 180;
           const length = data.labels.length - 1;
 
-          chart.getDatasetMeta(0).data.forEach((value, index) => {
-            const innerRadius = chart.getDatasetMeta(0).data[index].innerRadius;
-            const outerRadius = chart.getDatasetMeta(0).data[index].outerRadius;
-            const endAngle = chart.getDatasetMeta(0).data[index].endAngle;
-            const radius = (outerRadius - innerRadius) / 2;
+          // chart.getDatasetMeta(0).data.forEach((value, index) => {
+          const innerRadius = chart.getDatasetMeta(0).data[0].innerRadius;
+          const outerRadius = chart.getDatasetMeta(0).data[0].outerRadius;
+          const endAngle = chart.getDatasetMeta(0).data[0].endAngle;
+          const radius = (outerRadius - innerRadius) /2;
 
-            const coordinates = [];
-            for (let i = -0.03; i <= 0.03; i += 0.05) {
-              const xCoor =
-                (innerRadius + radius) * Math.cos(endAngle + Math.PI + i);
-              const yCoor = (innerRadius + radius) * Math.sin(endAngle + i);
-              coordinates.push({ x: xCoor, y: yCoor });
-            }
-            ctx.save();
-            ctx.fillStyle = data.datasets[0].backgroundColor[index];
-            ctx.translate(x, y);
-            ctx.beginPath();
-            coordinates.forEach(({ x, y }) => {
-              ctx.arc(-x, y, radius + 1, 0, angle * 360, false);
-            });
-            ctx.fill();
-            ctx.restore();
+          const coordinates = [];
+          for (let i = -0.03; i <= 0.03; i += 0.05) {
+            const xCoor =
+              (innerRadius + radius) * Math.cos(endAngle + Math.PI + i);
+            const yCoor = (innerRadius + radius) * Math.sin(endAngle + i);
+            coordinates.push({ x: xCoor, y: yCoor });
+          }
+          ctx.save();
+          ctx.fillStyle = data.datasets[0].backgroundColor[0];
+          ctx.translate(x, y);
+          ctx.beginPath();
+          coordinates.forEach(({ x, y }) => {
+            ctx.arc(-x, y, radius + 1, 0, angle * 360, false);
           });
+          
+          ctx.fill();
+          ctx.restore();
+          // });
         },
       };
       chartInstance.current = new Chart(ctx, {
@@ -112,31 +113,36 @@ const Circle = () => {
         data: {
           datasets: [
             {
-              label: "Doughnut Chart",
-              data: [currentTime, time],
+              // label: "Doughnut Chart",
+              data: [90,100-100],
               backgroundColor: ["#7012CE", "white"],
-              borderWidth: 3,
+              borderWidth: 2,
               borderColor: ["#7012CE", "white"],
             },
           ],
         },
         options: {
+          layout:{
+            padding:0
+          },
+          aspectRatio:3,
           responsive: true,
           cutout: "80%",
           plugins: {
             legend: {
               position: "top",
             },
-            title: {
-              display: true,
-              // text: "Doughnut Chart",
-            },
           },
+          animation:{
+            duration:0,
+          }
         },
         plugins: [overLappingSegment, doughnutLabel],
       });
+      
     }
 
+    
     return () => {
       if (chartInstance.current) {
         chartInstance.current.destroy();
@@ -145,11 +151,10 @@ const Circle = () => {
   }, [data, labels]);
 
   return (
-    <>
-      <div className="container " style={{width:"15rem",height:"10rem" ,marginTop:"0",padding:"0"}}>
-        <canvas className="chart-canvas" ref={chartRef} />
-      </div>
-    </>
+      <canvas
+        className="chart-canvas"
+        ref={chartRef}
+      />
   );
 };
 
